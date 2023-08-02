@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+#binary-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.allowclick {
+  z-index: 4000;
+}
+#binary-rain .binary {
+  position: absolute;
+  color: rgb(255, 0, 0);
+  font-size: 16px;
+  user-select: none;
+  animation: falling 3s linear infinite;
+}
+
+@keyframes falling {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+iframe {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  border: none;
+}
+
+/* Center the iframe content horizontally and vertically */
+iframe {
+  transform: translate(-18%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+#ransomware-container {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  top:-20%;
+}
+
+#ransomware-message {
+  text-align: center;
+  max-width: 500px;
+}
+
+#ransomware-message h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#bitcoin-address {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+#decrypt-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#fake-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+#popup-message {
+  font-size: 18px;
+}
+
+
+
+#button-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; /* Make sure it's on top of other elements */
+}
+
+#invisible-button {
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Make the button transparent */
+}
